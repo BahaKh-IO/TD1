@@ -1,28 +1,40 @@
-# Snake.cpp
+# Snake Game in C++
 
+This project contains different versions of a simple Snake game written in C++ for the console.
 
-Simple console Snake game implemented in a single file: `snake.cpp`.
+## Project Structure
 
-What this is
+The project is divided into three parts:
 
-- Minimal, beginner-friendly Snake clone that runs in a Windows console.
-- Uses `conio.h` for keyboard input and `windows.h` for `Sleep()` and `system("cls")`.
+- **Part A**: Snake implemented using arrays
+- **Part B**: Snake implemented using vectors
+- **Part C**: Snake implemented using a linked list
 
-Controls
+Each version keeps the same general game logic:
+- the snake moves inside the console window
+- the player controls the direction
+- the snake eats fruits to grow
+- the score increases when a fruit is eaten
+- the game ends if the snake collides with itself
 
-- W / A / S / D — move Up / Left / Down / Right
-- X — quit the game
+## Requirements
 
-Build & run
+This project is designed for **Windows** because it uses:
 
-- Recommended: use the included VS Code task "C/C++: gcc.exe build active file" (configured for MSYS2 UCRT64). Open `snake.cpp` and run the Build task.
+- `conio.h`
+- `windows.h`
 
-- Manual (PowerShell + MSYS2 UCRT64 gcc):
+You need a C++ compiler such as:
 
-  C:/msys64/ucrt64/bin/gcc.exe -fdiagnostics-color=always -g snake.cpp -o snake.exe; ./snake.exe
+- **MinGW g++**
+- or **Visual Studio C++ compiler**
 
-Notes
+## How to Compile and Run
 
-- This project is Windows-specific because it relies on `conio.h` and `windows.h`.
-- If the snake doesn't move on start, edit `dir` and `Sleep()` in `snake.cpp` to tweak starting direction and game speed.
-- The source is intentionally simple so you can extend it (add walls, scoring, levels, or nicer rendering).
+### With g++
+
+Open **Windows Terminal** or **Command Prompt**, go to the folder containing the source file, then run:
+
+```bash
+g++ snake.cpp -o snake.exe
+.\snake.exe

@@ -1,5 +1,6 @@
 # Snake.cpp
 
+
 Simple console Snake game implemented in a single file: `snake.cpp`.
 
 What this is
